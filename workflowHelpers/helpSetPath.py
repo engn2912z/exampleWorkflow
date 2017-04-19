@@ -7,9 +7,9 @@ def setPath(filename='.dataFolderPath'):
 	root=tk.Tk()
 	root.withdraw()
 	data_folder_path=filedialog.askdirectory()
-
-	with open(filename,'w') as f:
-		f.write(data_folder_path)
+	if len(data_folder_path)>0:
+		with open(filename,'w') as f:
+			f.write(data_folder_path)
 
 	root.quit()
 	
